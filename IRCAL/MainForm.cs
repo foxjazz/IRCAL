@@ -521,7 +521,7 @@ namespace myIRC
         //*********************************************************************
         //*************** THIS IS WHERE MESSAGES HAPPEN
         SBMessage sbmc;
-        IrcalBot ibot;
+        //IrcalBot ibot;
         private void icore_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             place = -1;
@@ -535,10 +535,10 @@ namespace myIRC
                 int icnt = mList.Count;
                 if (sbmc == null)
                     sbmc = new SBMessage();
-                if (ibot == null)
-                    ibot = new IrcalBot(ircCore1);
+                //if (ibot == null)
+                //    ibot = new IrcalBot(ircCore1);
 
-                ibot.pushmessage(mList);
+                //ibot.pushmessage(mList);
 
                 for (int i = 0; i < icnt; i++)
                 {
