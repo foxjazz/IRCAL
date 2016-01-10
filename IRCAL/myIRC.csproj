@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{54E0F932-CD22-4EF4-8DD5-21F15F54905D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>myIRC</RootNamespace>
+    <AssemblyName>IRCAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\ircaloutput2\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ServiceBus, Version=1.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\IrcServiceBus\packages\WindowsAzure.ServiceBus.1.8.0.0\lib\net40-full\Microsoft.ServiceBus.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration, Version=1.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\IrcServiceBus\packages\Microsoft.WindowsAzure.ConfigurationManager.1.7.0.3\lib\net35-full\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Speech">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CurrentState.cs" />
+    <Compile Include="DataClass.cs" />
+    <Compile Include="dbComp.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dbComp.Designer.cs">
+      <DependentUpon>dbComp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventClassArgs\ActionEventArgs.cs" />
+    <Compile Include="EventClassArgs\AuthEventArgs.cs" />
+    <Compile Include="EventClassArgs\BanListEventArgs.cs" />
+    <Compile Include="EventClassArgs\CTCPReceivedEventArgs.cs" />
+    <Compile Include="EventClassArgs\CTCPReplyEventArgs.cs" />
+    <Compile Include="EventClassArgs\ForwardEventArgs.cs" />
+    <Compile Include="frmConfigGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfigGeneral.Designer.cs">
+      <DependentUpon>frmConfigGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfigNameNotifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfigNameNotifications.Designer.cs">
+      <DependentUpon>frmConfigNameNotifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrivMessages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrivMessages.Designer.cs">
+      <DependentUpon>frmPrivMessages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrivMsgConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrivMsgConfig.Designer.cs">
+      <DependentUpon>frmPrivMsgConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRaw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRaw.Designer.cs">
+      <DependentUpon>frmRaw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Info\ChanFav.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddServerUtility.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddServerUtility.Designer.cs">
+      <DependentUpon>frmAddServerUtility.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFavoriteChannels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFavoriteChannels.Designer.cs">
+      <DependentUpon>frmFavoriteChannels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Info\BanList.cs" />
+    <Compile Include="Info\BanListItem.cs" />
+    <Compile Include="Info\ChannelInfo.cs" />
+    <Compile Include="Info\ChannelList.cs" />
+    <Compile Include="Info\ChannelListItem.cs" />
+    <Compile Include="IRCCore.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IRCCore.Designer.cs">
+      <DependentUpon>IRCCore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IRCParser.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IRCParser.Designer.cs">
+      <DependentUpon>IRCParser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventClassArgs\JoinEventArgs.cs" />
+    <Compile Include="EventClassArgs\KickEventArgs.cs" />
+    <Compile Include="IRCserver.cs" />
+    <Compile Include="Message.cs" />
+    <Compile Include="EventClassArgs\ModeEventArgs.cs" />
+    <Compile Include="EventClassArgs\NameReplyEventArgs.cs" />
+    <Compile Include="EventClassArgs\NickEventArgs.cs" />
+    <Compile Include="EventClassArgs\NoticeEventArgs.cs" />
+    <Compile Include="EventClassArgs\PrivMsgEventArgs.cs" />
+    <Compile Include="ChanMessageList.cs" />
+    <Compile Include="Notify.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmConfigGeneral.resx">
+      <DependentUpon>frmConfigGeneral.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfigNameNotifications.resx">
+      <DependentUpon>frmConfigNameNotifications.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrivMessages.resx">
+      <DependentUpon>frmPrivMessages.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrivMsgConfig.resx">
+      <DependentUpon>frmPrivMsgConfig.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRaw.resx">
+      <DependentUpon>frmRaw.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddServerUtility.resx">
+      <DependentUpon>frmAddServerUtility.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFavoriteChannels.resx">
+      <DependentUpon>frmFavoriteChannels.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IRCCore.resx">
+      <DependentUpon>IRCCore.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SavedSet.xsc">
+      <DependentUpon>SavedSet.xsd</DependentUpon>
+    </None>
+    <None Include="SavedSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SavedSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SavedSet.xss">
+      <DependentUpon>SavedSet.xsd</DependentUpon>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="EventClassArgs\TopicEventArgs.cs" />
+    <Compile Include="EventClassArgs\TopicSetByEventArgs.cs" />
+    <Compile Include="SavedSet.cs">
+      <DependentUpon>SavedSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SavedSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SavedSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SBMessage.cs" />
+    <Compile Include="ServerState.cs" />
+    <Compile Include="StartupAndJoins.cs" />
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="UtilityService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

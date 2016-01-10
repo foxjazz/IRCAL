@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SavedSet" targetNamespace="http://tempuri.org/SavedSet.xsd" xmlns:mstns="http://tempuri.org/SavedSet.xsd" xmlns="http://tempuri.org/SavedSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SavedSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="SavedSet" msprop:Generator_DataSetName="SavedSet" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ServerList" msprop:Generator_UserTableName="ServerList" msprop:Generator_RowDeletedName="ServerListRowDeleted" msprop:Generator_RowChangedName="ServerListRowChanged" msprop:Generator_RowClassName="ServerListRow" msprop:Generator_RowChangingName="ServerListRowChanging" msprop:Generator_RowEvArgName="ServerListRowChangeEvent" msprop:Generator_RowEvHandlerName="ServerListRowChangeEventHandler" msprop:Generator_TableClassName="ServerListDataTable" msprop:Generator_TableVarName="tableServerList" msprop:Generator_RowDeletingName="ServerListRowDeleting" msprop:Generator_TablePropName="ServerList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="servername" msprop:Generator_UserColumnName="servername" msprop:Generator_ColumnPropNameInRow="servername" msprop:Generator_ColumnVarNameInTable="columnservername" msprop:Generator_ColumnPropNameInTable="servernameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="port" msprop:Generator_UserColumnName="port" msprop:Generator_ColumnVarNameInTable="columnport" msprop:Generator_ColumnPropNameInRow="port" msprop:Generator_ColumnPropNameInTable="portColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ChannelFavorites" msprop:Generator_UserTableName="ChannelFavorites" msprop:Generator_RowDeletedName="ChannelFavoritesRowDeleted" msprop:Generator_RowChangedName="ChannelFavoritesRowChanged" msprop:Generator_RowClassName="ChannelFavoritesRow" msprop:Generator_RowChangingName="ChannelFavoritesRowChanging" msprop:Generator_RowEvArgName="ChannelFavoritesRowChangeEvent" msprop:Generator_RowEvHandlerName="ChannelFavoritesRowChangeEventHandler" msprop:Generator_TableClassName="ChannelFavoritesDataTable" msprop:Generator_TableVarName="tableChannelFavorites" msprop:Generator_RowDeletingName="ChannelFavoritesRowDeleting" msprop:Generator_TablePropName="ChannelFavorites">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Channel" msprop:Generator_UserColumnName="Channel" msprop:Generator_ColumnPropNameInRow="Channel" msprop:Generator_ColumnVarNameInTable="columnChannel" msprop:Generator_ColumnPropNameInTable="ChannelColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="servername" msprop:Generator_UserColumnName="servername" msprop:Generator_ColumnPropNameInRow="servername" msprop:Generator_ColumnVarNameInTable="columnservername" msprop:Generator_ColumnPropNameInTable="servernameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NotifyMinute" msprop:Generator_UserColumnName="NotifyMinute" msprop:Generator_ColumnVarNameInTable="columnNotifyMinute" msprop:Generator_ColumnPropNameInRow="NotifyMinute" msprop:Generator_ColumnPropNameInTable="NotifyMinuteColumn" type="xs:int" default="1000" minOccurs="0" />
+              <xs:element name="Phonetic" msprop:Generator_UserColumnName="Phonetic" msprop:Generator_ColumnVarNameInTable="columnPhonetic" msprop:Generator_ColumnPropNameInRow="Phonetic" msprop:Generator_ColumnPropNameInTable="PhoneticColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="Last" msprop:Generator_UserColumnName="Last" msprop:Generator_ColumnVarNameInTable="columnLast" msprop:Generator_ColumnPropNameInRow="Last" msprop:Generator_ColumnPropNameInTable="LastColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="NameNotification" msprop:Generator_UserTableName="NameNotification" msprop:Generator_RowDeletedName="NameNotificationRowDeleted" msprop:Generator_RowChangedName="NameNotificationRowChanged" msprop:Generator_RowClassName="NameNotificationRow" msprop:Generator_RowChangingName="NameNotificationRowChanging" msprop:Generator_RowEvArgName="NameNotificationRowChangeEvent" msprop:Generator_RowEvHandlerName="NameNotificationRowChangeEventHandler" msprop:Generator_TableClassName="NameNotificationDataTable" msprop:Generator_TableVarName="tableNameNotification" msprop:Generator_RowDeletingName="NameNotificationRowDeleting" msprop:Generator_TablePropName="NameNotification">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nick" msprop:Generator_UserColumnName="Nick" msprop:Generator_ColumnPropNameInRow="Nick" msprop:Generator_ColumnVarNameInTable="columnNick" msprop:Generator_ColumnPropNameInTable="NickColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Threshold" msprop:Generator_UserColumnName="Threshold" msprop:Generator_ColumnPropNameInRow="Threshold" msprop:Generator_ColumnVarNameInTable="columnThreshold" msprop:Generator_ColumnPropNameInTable="ThresholdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="WaveFile" msprop:Generator_UserColumnName="WaveFile" msprop:Generator_ColumnPropNameInRow="WaveFile" msprop:Generator_ColumnVarNameInTable="columnWaveFile" msprop:Generator_ColumnPropNameInTable="WaveFileColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Phonetic" msprop:Generator_UserColumnName="Phonetic" msprop:Generator_ColumnPropNameInRow="Phonetic" msprop:Generator_ColumnVarNameInTable="columnPhonetic" msprop:Generator_ColumnPropNameInTable="PhoneticColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DateOfLastActivity" msprop:Generator_UserColumnName="DateOfLastActivity" msprop:Generator_ColumnPropNameInRow="DateOfLastActivity" msprop:Generator_ColumnVarNameInTable="columnDateOfLastActivity" msprop:Generator_ColumnPropNameInTable="DateOfLastActivityColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TextNotifications" msprop:Generator_UserTableName="TextNotifications" msprop:Generator_RowDeletedName="TextNotificationsRowDeleted" msprop:Generator_RowChangedName="TextNotificationsRowChanged" msprop:Generator_RowClassName="TextNotificationsRow" msprop:Generator_RowChangingName="TextNotificationsRowChanging" msprop:Generator_RowEvArgName="TextNotificationsRowChangeEvent" msprop:Generator_RowEvHandlerName="TextNotificationsRowChangeEventHandler" msprop:Generator_TableClassName="TextNotificationsDataTable" msprop:Generator_TableVarName="tableTextNotifications" msprop:Generator_RowDeletingName="TextNotificationsRowDeleting" msprop:Generator_TablePropName="TextNotifications">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Text" msprop:Generator_UserColumnName="Text" msprop:Generator_ColumnPropNameInRow="Text" msprop:Generator_ColumnVarNameInTable="columnText" msprop:Generator_ColumnPropNameInTable="TextColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="WaveFile" msprop:Generator_UserColumnName="WaveFile" msprop:Generator_ColumnPropNameInRow="WaveFile" msprop:Generator_ColumnVarNameInTable="columnWaveFile" msprop:Generator_ColumnPropNameInTable="WaveFileColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PrivateNicks" msprop:Generator_UserTableName="PrivateNicks" msprop:Generator_RowDeletedName="PrivateNicksRowDeleted" msprop:Generator_RowChangedName="PrivateNicksRowChanged" msprop:Generator_RowClassName="PrivateNicksRow" msprop:Generator_RowChangingName="PrivateNicksRowChanging" msprop:Generator_RowEvArgName="PrivateNicksRowChangeEvent" msprop:Generator_RowEvHandlerName="PrivateNicksRowChangeEventHandler" msprop:Generator_TableClassName="PrivateNicksDataTable" msprop:Generator_TableVarName="tablePrivateNicks" msprop:Generator_RowDeletingName="PrivateNicksRowDeleting" msprop:Generator_TablePropName="PrivateNicks">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nick" msprop:Generator_UserColumnName="Nick" msprop:Generator_ColumnPropNameInRow="Nick" msprop:Generator_ColumnVarNameInTable="columnNick" msprop:Generator_ColumnPropNameInTable="NickColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ConfigInfo" msprop:Generator_UserTableName="ConfigInfo" msprop:Generator_RowDeletedName="ConfigInfoRowDeleted" msprop:Generator_RowChangedName="ConfigInfoRowChanged" msprop:Generator_RowClassName="ConfigInfoRow" msprop:Generator_RowChangingName="ConfigInfoRowChanging" msprop:Generator_RowEvArgName="ConfigInfoRowChangeEvent" msprop:Generator_RowEvHandlerName="ConfigInfoRowChangeEventHandler" msprop:Generator_TableClassName="ConfigInfoDataTable" msprop:Generator_TableVarName="tableConfigInfo" msprop:Generator_RowDeletingName="ConfigInfoRowDeleting" msprop:Generator_TablePropName="ConfigInfo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NameColor" msprop:Generator_UserColumnName="NameColor" msprop:Generator_ColumnVarNameInTable="columnNameColor" msprop:Generator_ColumnPropNameInRow="NameColor" msprop:Generator_ColumnPropNameInTable="NameColorColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="LinesToKeep" msprop:Generator_UserColumnName="LinesToKeep" msprop:Generator_ColumnVarNameInTable="columnLinesToKeep" msprop:Generator_ColumnPropNameInRow="LinesToKeep" msprop:Generator_ColumnPropNameInTable="LinesToKeepColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ActionColor" msprop:Generator_UserColumnName="ActionColor" msprop:Generator_ColumnVarNameInTable="columnActionColor" msprop:Generator_ColumnPropNameInRow="ActionColor" msprop:Generator_ColumnPropNameInTable="ActionColorColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="AlertColor" msprop:Generator_UserColumnName="AlertColor" msprop:Generator_ColumnVarNameInTable="columnAlertColor" msprop:Generator_ColumnPropNameInRow="AlertColor" msprop:Generator_ColumnPropNameInTable="AlertColorColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="NickColor" msprop:Generator_UserColumnName="NickColor" msprop:Generator_ColumnVarNameInTable="columnNickColor" msprop:Generator_ColumnPropNameInRow="NickColor" msprop:Generator_ColumnPropNameInTable="NickColorColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Nick" msprop:Generator_UserColumnName="Nick" msprop:Generator_ColumnPropNameInRow="Nick" msprop:Generator_ColumnVarNameInTable="columnNick" msprop:Generator_ColumnPropNameInTable="NickColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RealName" msprop:Generator_UserColumnName="RealName" msprop:Generator_ColumnPropNameInRow="RealName" msprop:Generator_ColumnVarNameInTable="columnRealName" msprop:Generator_ColumnPropNameInTable="RealNameColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="ChannelFavorites_ServerList" msdata:parent="ChannelFavorites" msdata:child="ServerList" msdata:parentkey="Channel" msdata:childkey="servername" msprop:Generator_UserRelationName="ChannelFavorites_ServerList" msprop:Generator_RelationVarName="relationChannelFavorites_ServerList" msprop:Generator_UserChildTable="ServerList" msprop:Generator_UserParentTable="ChannelFavorites" msprop:Generator_ParentPropName="ChannelFavoritesRow" msprop:Generator_ChildPropName="GetServerListRows" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>
